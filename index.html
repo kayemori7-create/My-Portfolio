@@ -129,7 +129,8 @@
   .svc-arrow{font-size:1.5rem;flex-shrink:0;transition:transform .25s}
   .svc-item:hover .svc-arrow{transform:rotate(45deg)}
   .toolkit-strip{margin-top:44px;padding-top:34px;border-top:1px dashed var(--line)}
-  .toolkit-strip h4{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 20px}
+  .toolkit-strip h4{grid-column:1/-1;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:0 0 6px;display:flex;align-items:center;gap:10px}
+  .toolkit-strip h4::before{content:"";width:22px;height:2px;background:var(--accent);flex-shrink:0}
   .tk-cat{margin-bottom:18px}
   .tk-cat:last-child{margin-bottom:0}
   .tk-cat-label{display:block;font-size:.74rem;font-weight:600;color:var(--ink);margin-bottom:8px}
