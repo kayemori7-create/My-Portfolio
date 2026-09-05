@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bookkeeping Work Samples | Raquel S. Raytos</title>
+<meta name="description" content="Bookkeeping work samples from a hands-on internship at Digital Bytes Financial Consultancy Services — Xero reports covering financial statements, BAS/IAS activity statements, and transaction records." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101010;
+    --ink-soft:#4a4a4a;
+    --paper:#ffffff;
+    --paper-2:#f4f4f2;
+    --line:rgba(16,16,16,.14);
+    --line-soft:rgba(16,16,16,.08);
+    --accent:#2ea44a;
+    --display:Arial,Helvetica,sans-serif;
+    --body:"Inter",system-ui,-apple-system,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;font-family:var(--body);color:var(--ink);
+    background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  ul{margin:0;padding:0;list-style:none}
+
+  /* NAV — same as index.html */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:8px 14px 8px 12px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(46,164,74,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,164,74,.55)}70%{box-shadow:0 0 0 7px rgba(46,164,74,0)}100%{box-shadow:0 0 0 0 rgba(46,164,74,0)}}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a:not(.pill){font-size:.92rem;font-weight:500;color:var(--ink);position:relative;padding-bottom:2px}
+  .nav-links a:not(.pill)::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--ink);transition:right .25s ease}
+  .nav-links a:not(.pill):hover::after{right:0}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:11px 20px;border-radius:100px;font-weight:600;font-size:.88rem;transition:transform .2s,background .2s}
+  .pill:hover{background:#2a2a2a;transform:translateY(-1px)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+  /* PAGE HEAD */
+  .page-head{padding:64px 0 30px}
+  .breadcrumb{display:inline-block;font-size:.86rem;font-weight:600;color:var(--ink-soft);margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .breadcrumb:hover{color:var(--ink)}
+  .page-head h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.01em;margin:0 0 16px}
+  .page-head p{color:var(--ink-soft);max-width:62ch;font-size:1.02rem;margin:0 0 22px}
+  .head-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .head-tag{font-size:.78rem;font-weight:600;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
+
+  .context-box{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:16px;padding:22px 26px;margin-top:8px}
+  .context-box p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:74ch}
+  .context-box strong{color:var(--ink)}
+
+  main{padding:20px 0 100px}
+
+  /* CATEGORY GROUPS */
+  .cat-group{padding:48px 0;border-top:1px solid var(--line)}
+  .cat-head{margin-bottom:26px}
+  .cat-head h2{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:0 0 6px}
+  .cat-head p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:60ch}
+
+  .report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .report-card{
+    background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;
+    cursor:zoom-in;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    opacity:0;transform:translateY(14px);
+  }
+  .report-card.in{opacity:1;transform:none}
+  .report-card:hover{transform:translateY(-4px);box-shadow:0 22px 38px -28px rgba(16,16,16,.32);border-color:var(--line)}
+  .report-thumb{aspect-ratio:4/5;background:var(--paper-2);position:relative;overflow:hidden}
+  .report-thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .report-thumb::after{
+    content:"View full report";
+    position:absolute;inset:auto 0 0 0;background:rgba(16,16,16,.82);color:#fff;
+    font-size:.68rem;font-weight:600;text-align:center;padding:7px 0;
+    transform:translateY(100%);transition:transform .25s ease;
+  }
+  .report-card:hover .report-thumb::after{transform:translateY(0)}
+  .report-info{padding:14px 16px 16px}
+  .report-title{font-weight:600;font-size:.92rem;margin:0 0 4px}
+  .report-meta{font-size:.76rem;color:var(--ink-soft);margin:0}
+
+  @media(max-width:480px){
+    .report-grid{grid-template-columns:repeat(2,1fr)}
+  }
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(16,16,16,.92);display:none;align-items:center;justify-content:center;padding:30px 16px;z-index:200}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(760px,100%);max-height:90vh;border-radius:8px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .lightbox-close{position:absolute;top:20px;right:24px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:1.2rem;cursor:pointer;z-index:2}
+  .lightbox-close:hover{background:rgba(255,255,255,.1)}
+  .lightbox-cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#d8d8d2;font-size:.85rem}
+
+  footer{background:var(--ink);color:#a9a9a3;text-align:center;padding:34px 0;font-size:.85rem}
+  footer .brand{color:#fff;font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
+
+  @media(max-width:680px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.report-card{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="avail"><span class="dot"></span>Available for New Clients</span>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#service">Service</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="pill" href="index.html#contact">Let's Talk <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <a class="breadcrumb" href="index.html">&larr; Back to portfolio</a>
+    <h1>Bookkeeping Work Sample</h1>
+    <p>A set of Xero-generated reports produced during a 30-day remote bookkeeping internship at Digital Bytes Financial Consultancy Services — covering financial statements, tax compliance, receivables &amp; payables, and transaction records.</p>
+    <div class="head-tags">
+      <span class="head-tag">Xero</span>
+      <span class="head-tag">Australian BAS/IAS</span>
+      <span class="head-tag">Bank Reconciliation</span>
+      <span class="head-tag">Financial Reporting</span>
+    </div>
+    <div class="context-box" style="margin-top:24px">
+      <p><strong>Context:</strong> These reports were produced for a training-client file during the internship (Jul&ndash;Aug 2026), covering the period 1 January&ndash;31 March 2024. They demonstrate the full quarterly bookkeeping cycle in Xero: monthly and quarterly financial statements, GST/BAS and PAYG/IAS activity statements, aged receivables and payables tracking, and full transaction-level records.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="cat-group" style="border-top:none;padding-top:8px">
+      <div class="cat-head">
+        <h2>Financial Statements</h2>
+        <p>Core monthly and quarterly reporting: profitability, financial position, and a plain-language executive summary of both.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Profit_and_Loss_page-0001.jpg" data-cap="Profit and Loss — For the 2 months ended 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Profit_and_Loss_page-0001.jpg" alt="Profit and Loss report, 2 months ended 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Profit and Loss</p><p class="report-meta">Jan&ndash;Feb 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Profit_and_Loss_page-0002.jpg" data-cap="Profit and Loss — For the 3 months ended 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Profit_and_Loss_page-0002.jpg" alt="Profit and Loss report, 3 months ended 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Profit and Loss</p><p class="report-meta">Jan&ndash;Mar 2024 (Quarterly)</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Balance_Sheet_page-0001.jpg" data-cap="Balance Sheet — As at 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Balance_Sheet_page-0001.jpg" alt="Balance Sheet as at 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Balance Sheet</p><p class="report-meta">As at 29 Feb 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Balance_Sheet_page-0002.jpg" data-cap="Balance Sheet — As at 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Balance_Sheet_page-0002.jpg" alt="Balance Sheet as at 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Balance Sheet</p><p class="report-meta">As at 31 Mar 2024 (Quarterly)</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Executive_Summary_page-0001.jpg" data-cap="Executive Summary — For the 2 months ended 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Executive_Summary_page-0001.jpg" alt="Executive Summary, 2 months ended 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Executive Summary</p><p class="report-meta">Jan&ndash;Feb 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Executive_Summary_page-0002.jpg" data-cap="Executive Summary — For the 3 months ended 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Executive_Summary_page-0002.jpg" alt="Executive Summary, 3 months ended 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Executive Summary</p><p class="report-meta">Jan&ndash;Mar 2024 (Quarterly)</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Trial_Balance_page-0001.jpg" data-cap="Trial Balance — As at 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Trial_Balance_page-0001.jpg" alt="Trial Balance as at 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Trial Balance</p><p class="report-meta">As at 29 Feb 2024</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>BAS &amp; IAS Activity Statements</h2>
+        <p>GST and PAYG reporting to the Australian Tax Office, plus the supporting audit reports that reconcile every figure back to source transactions.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="DBFCS__Raquel_S__Raytos_-_Activity_Statement_IAS_JAN_page-0001.jpg" data-cap="Activity Statement (IAS) — For the period ending 31 January 2024">
+          <div class="report-thumb"><img src="DBFCS__Raquel_S__Raytos_-_Activity_Statement_IAS_JAN_page-0001.jpg" alt="Activity Statement IAS, period ending 31 January 2024"></div>
+          <div class="report-info"><p class="report-title">Activity Statement (IAS)</p><p class="report-meta">Period ending 31 Jan 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS__Raquel_S__Raytos_-_Activity_Statement_IAS_FEB_page-0001.jpg" data-cap="Activity Statement (IAS) — For the period ending 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS__Raquel_S__Raytos_-_Activity_Statement_IAS_FEB_page-0001.jpg" alt="Activity Statement IAS, period ending 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Activity Statement (IAS)</p><p class="report-meta">Period ending 29 Feb 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0001.jpg" data-cap="Activity Statement (BAS) — For the period ending 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0001.jpg" alt="Activity Statement BAS, period ending 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Activity Statement (BAS)</p><p class="report-meta">Quarterly, ending 31 Mar 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0002.jpg" data-cap="Transactions by Tax Rate Audit Report — supporting the March BAS">
+          <div class="report-thumb"><img src="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0002.jpg" alt="Transactions by Tax Rate Audit Report"></div>
+          <div class="report-info"><p class="report-title">Transactions by Tax Rate</p><p class="report-meta">BAS audit detail</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0011.jpg" data-cap="Transactions by BAS Field Audit Report — G1 total sales breakdown">
+          <div class="report-thumb"><img src="DBFCS__Raquel_S__Raytos_-_Activity_Statement_BAS_page-0011.jpg" alt="Transactions by BAS Field Audit Report"></div>
+          <div class="report-info"><p class="report-title">Transactions by BAS Field</p><p class="report-meta">BAS audit detail</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Receivables &amp; Payables</h2>
+        <p>Ageing summaries used to track who owes the business money, and what the business owes its suppliers.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Aged_Receivables_Summary_page-0001.jpg" data-cap="Aged Receivables Summary — As at 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Aged_Receivables_Summary_page-0001.jpg" alt="Aged Receivables Summary as at 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Aged Receivables Summary</p><p class="report-meta">As at 31 Mar 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Aged_Payables_Summary_page-0001.jpg" data-cap="Aged Payables Summary — As at 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Aged_Payables_Summary_page-0001.jpg" alt="Aged Payables Summary as at 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Aged Payables Summary</p><p class="report-meta">As at 31 Mar 2024</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Transaction Records</h2>
+        <p>Detailed, line-by-line records: every journal entry and every posted transaction across all accounts for the quarter.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Journal_Report_page-0001.jpg" data-cap="Journal Report — For the period 1 January to 31 March 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Journal_Report_page-0001.jpg" alt="Journal Report, 1 January to 31 March 2024"></div>
+          <div class="report-info"><p class="report-title">Journal Report</p><p class="report-meta">Jan&ndash;Mar 2024</p></div>
+        </button>
+
+        <button class="report-card" data-full="DBFCS___Raquel_S__Raytos_-_Account_Transactions_page-0001.jpg" data-cap="Account Transactions — For the period 1 January to 29 February 2024">
+          <div class="report-thumb"><img src="DBFCS___Raquel_S__Raytos_-_Account_Transactions_page-0001.jpg" alt="Account Transactions, 1 January to 29 February 2024"></div>
+          <div class="report-info"><p class="report-title">Account Transactions</p><p class="report-meta">Jan&ndash;Feb 2024</p></div>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Enlarged report">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Raquel S. Raytos</div>
+    <div>Digital Marketing &amp; Web Specialist · Working with clients worldwide</div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  btn&&btn.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.report-card').forEach(function(el){io.observe(el)});
+
+  var lightbox=document.getElementById('lightbox');
+  var lightboxImg=document.getElementById('lightboxImg');
+  var lightboxCap=document.getElementById('lightboxCap');
+  document.querySelectorAll('.report-card').forEach(function(t){
+    t.addEventListener('click',function(){
+      lightboxImg.src=t.getAttribute('data-full');
+      lightboxCap.textContent=t.getAttribute('data-cap')||'';
+      lightbox.classList.add('open');
+    });
+  });
+  function closeLightbox(){lightbox.classList.remove('open');lightboxImg.src='';lightboxCap.textContent='';}
+  document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+
+</body>
+</html>
