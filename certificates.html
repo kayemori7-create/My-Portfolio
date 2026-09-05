@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates &amp; Training | Raquel S. Raytos</title>
+<style>
+  :root{
+    --navy:#132242;
+    --navy-deep:#0b1730;
+    --gold:#a9803e;
+    --gold-soft:#c9a25f;
+    --paper:#f7f4ee;
+    --ink:#232323;
+    --ink-soft:#5b5b5b;
+    --rule:#dedad0;
+    --card-bg:#ffffff;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Sans Pro", "Segoe UI", Arial, sans-serif;
+    line-height:1.55;
+  }
+
+  h1,h2,.cert-title{
+    font-family:"Georgia", "Iowan Old Style", "Times New Roman", serif;
+  }
+
+  a{color:inherit;}
+
+  /* ---------- Header ---------- */
+  header.page-head{
+    background:var(--navy);
+    color:#f1efe8;
+    padding:64px 24px 56px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  header.page-head::after{
+    content:"";
+    position:absolute;
+    right:-60px;
+    top:-60px;
+    width:220px;
+    height:220px;
+    border:1px solid rgba(201,162,95,0.35);
+    border-radius:50%;
+  }
+
+  .head-inner{
+    max-width:760px;
+    margin:0 auto;
+    position:relative;
+    z-index:1;
+  }
+
+  .breadcrumb{
+    font-size:0.85rem;
+    color:var(--gold-soft);
+    text-decoration:none;
+    display:inline-block;
+    margin-bottom:22px;
+    border-bottom:1px solid rgba(201,162,95,0.4);
+    padding-bottom:2px;
+  }
+
+  header.page-head h1{
+    font-size:2.4rem;
+    font-weight:400;
+    margin:0 0 14px;
+    letter-spacing:0.2px;
+  }
+
+  header.page-head p{
+    max-width:520px;
+    color:#cfd4e0;
+    font-size:1.02rem;
+    margin:0;
+  }
+
+  /* ---------- List ---------- */
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 90px;
+  }
+
+  .cert-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-top:1px solid var(--rule);
+  }
+
+  .cert-item{
+    border-bottom:1px solid var(--rule);
+    padding:34px 0;
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:28px;
+    align-items:start;
+  }
+
+  .cert-thumb{
+    width:150px;
+    height:106px;
+    border-radius:2px;
+    overflow:hidden;
+    background:var(--card-bg);
+    border:1px solid var(--rule);
+    cursor:zoom-in;
+    position:relative;
+  }
+
+  .cert-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.4s ease;
+  }
+
+  .cert-thumb:hover img{
+    transform:scale(1.06);
+  }
+
+  .cert-thumb::before{
+    content:"View";
+    position:absolute;
+    inset:auto 0 0 0;
+    background:rgba(19,34,66,0.82);
+    color:#f1efe8;
+    font-size:0.7rem;
+    letter-spacing:0.04em;
+    text-align:center;
+    padding:5px 0;
+    transform:translateY(100%);
+    transition:transform 0.25s ease;
+  }
+
+  .cert-thumb:hover::before{
+    transform:translateY(0);
+  }
+
+  .cert-body{
+    padding-top:2px;
+  }
+
+  .cert-org{
+    font-size:0.78rem;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin:0 0 6px;
+    font-family:"Source Sans Pro", Arial, sans-serif;
+    font-weight:600;
+  }
+
+  .cert-title{
+    font-size:1.3rem;
+    font-weight:400;
+    color:var(--navy);
+    margin:0 0 8px;
+  }
+
+  .cert-meta{
+    font-size:0.9rem;
+    color:var(--ink-soft);
+    margin:0 0 10px;
+  }
+
+  .cert-desc{
+    font-size:0.95rem;
+    color:var(--ink);
+    margin:0;
+    max-width:56ch;
+  }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(11,23,48,0.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    z-index:50;
+  }
+
+  .lightbox.open{
+    display:flex;
+  }
+
+  .lightbox img{
+    max-width:min(900px, 100%);
+    max-height:88vh;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    border-radius:2px;
+  }
+
+  .lightbox-close{
+    position:absolute;
+    top:24px;
+    right:28px;
+    color:#f1efe8;
+    background:none;
+    border:1px solid rgba(241,239,232,0.4);
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    font-size:1.1rem;
+    cursor:pointer;
+  }
+
+  .lightbox-close:focus-visible,
+  .cert-thumb:focus-visible{
+    outline:2px solid var(--gold-soft);
+    outline-offset:2px;
+  }
+
+  @media (max-width: 620px){
+    .cert-item{
+      grid-template-columns:1fr;
+    }
+    .cert-thumb{
+      width:100%;
+      height:170px;
+    }
+    header.page-head h1{
+      font-size:1.9rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .cert-thumb img, .cert-thumb::before{
+      transition:none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <div class="head-inner">
+    <a class="breadcrumb" href="index.html">&larr; Back to portfolio</a>
+    <h1>Certificates &amp; Training</h1>
+    <p>A record of the courses and hands-on training I've completed in bookkeeping, executive support, and digital marketing.</p>
+  </div>
+</header>
+
+<main>
+  <ul class="cert-list">
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Bookkeeping_Intern.png" aria-label="View full certificate: Bookkeeping &amp; Financial Operations Internship">
+        <img src="certificates/Bookkeeping_Intern.png" alt="Internship Certificate of Completion, Digital Bytes Financial Consultancy Services">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">Digital Bytes Financial Consultancy Services</p>
+        <h2 class="cert-title">Bookkeeping &amp; Financial Operations Internship</h2>
+        <p class="cert-meta">30-day remote internship &middot; July 6 &ndash; July 31, 2026</p>
+        <p class="cert-desc">Hands-on experience across the full bookkeeping cycle in Xero: quotes, invoices, purchase orders, bank reconciliations, payroll, and BAS, IAS, and income tax preparation.</p>
+      </div>
+    </li>
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Bookkeeping.png" aria-label="View full certificate: Australian Bookkeeping with Xero">
+        <img src="certificates/Bookkeeping.png" alt="Certificate of Participation, Australian Bookkeeping with Xero Accounting Software">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">ProVA Virtual Assistant Training</p>
+        <h2 class="cert-title">Australian Bookkeeping with Xero Accounting Software</h2>
+        <p class="cert-meta">2-day intensive course &middot; June 27&ndash;28, 2026</p>
+        <p class="cert-desc">In-depth training on Australian bookkeeping practices and workflows using Xero, preparing for real client accounts.</p>
+      </div>
+    </li>
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Executive_Assistant.png" aria-label="View full certificate: Executive Assistant Training">
+        <img src="certificates/Executive_Assistant.png" alt="Certificate of Participation, Intensive Executive Assistant Online Course">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">ProVA Virtual Assistant Training</p>
+        <h2 class="cert-title">Intensive Executive Assistant Training</h2>
+        <p class="cert-meta">June 27&ndash;28, 2026</p>
+        <p class="cert-desc">Covered email, calendar, travel, and event management, confidentiality practices, task prioritization, and client-facing skills for EA work.</p>
+      </div>
+    </li>
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Wordpress.png" aria-label="View full certificate: WordPress Training">
+        <img src="certificates/Wordpress.png" alt="Certificate of Participation, WordPress Training for SEO, Backup and Restore, and Security">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">ProVA Virtual Assistant Training</p>
+        <h2 class="cert-title">WordPress Training &mdash; SEO, Backup &amp; Restore, and Security</h2>
+        <p class="cert-meta">September 17, 2023</p>
+        <p class="cert-desc">Site setup and maintenance: themes, pages, menus, media, widgets, backups, and security plugins.</p>
+      </div>
+    </li>
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Raquel_Raytos.png" aria-label="View full certificate: Search Engine Optimization">
+        <img src="certificates/Raquel_Raytos.png" alt="Certificate of Participation, Search Engine Optimization Online Course">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">ProVA Virtual Assistant Training</p>
+        <h2 class="cert-title">Search Engine Optimization (SEO)</h2>
+        <p class="cert-meta">April 2, 2023</p>
+        <p class="cert-desc">On-page and off-page SEO fundamentals: keyword research, link building, content strategy, and measuring results.</p>
+      </div>
+    </li>
+
+    <li class="cert-item">
+      <button class="cert-thumb" data-full="certificates/Raquel_S__Raytos.png" aria-label="View full certificate: Social Media Management">
+        <img src="certificates/Raquel_S__Raytos.png" alt="Certificate of Participation, Social Media Management Online Course">
+      </button>
+      <div class="cert-body">
+        <p class="cert-org">ProVA Virtual Assistant Training</p>
+        <h2 class="cert-title">Social Media Management (SMM)</h2>
+        <p class="cert-meta">March 18, 2023</p>
+        <p class="cert-desc">Managing accounts across platforms, content workflows, reporting, and pricing social media services for clients.</p>
+      </div>
+    </li>
+
+  </ul>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Enlarged certificate">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.cert-thumb').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      lightboxImg.src = thumb.getAttribute('data-full');
+      lightbox.classList.add('open');
+    });
+  });
+
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
