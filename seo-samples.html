@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO Work Samples | Raquel S. Raytos</title>
+<meta name="description" content="SEO work samples across indexing, Google Business Profile, keyword research, technical SEO, and on-page content optimization." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101010;
+    --ink-soft:#4a4a4a;
+    --paper:#ffffff;
+    --paper-2:#f4f4f2;
+    --line:rgba(16,16,16,.14);
+    --line-soft:rgba(16,16,16,.08);
+    --accent:#2ea44a;
+    --display:Arial,Helvetica,sans-serif;
+    --body:"Inter",system-ui,-apple-system,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;font-family:var(--body);color:var(--ink);
+    background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  ul{margin:0;padding:0;list-style:none}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:8px 14px 8px 12px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(46,164,74,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,164,74,.55)}70%{box-shadow:0 0 0 7px rgba(46,164,74,0)}100%{box-shadow:0 0 0 0 rgba(46,164,74,0)}}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a:not(.pill){font-size:.92rem;font-weight:500;color:var(--ink);position:relative;padding-bottom:2px}
+  .nav-links a:not(.pill)::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--ink);transition:right .25s ease}
+  .nav-links a:not(.pill):hover::after{right:0}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:11px 20px;border-radius:100px;font-weight:600;font-size:.88rem;transition:transform .2s,background .2s}
+  .pill:hover{background:#2a2a2a;transform:translateY(-1px)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+  .page-head{padding:64px 0 30px}
+  .breadcrumb{display:inline-block;font-size:.86rem;font-weight:600;color:var(--ink-soft);margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .breadcrumb:hover{color:var(--ink)}
+  .page-head h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.01em;margin:0 0 16px}
+  .page-head p{color:var(--ink-soft);max-width:62ch;font-size:1.02rem;margin:0 0 22px}
+  .head-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .head-tag{font-size:.78rem;font-weight:600;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
+
+  .context-box{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:16px;padding:22px 26px;margin-top:24px}
+  .context-box p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:74ch}
+  .context-box strong{color:var(--ink)}
+
+  main{padding:20px 0 100px}
+
+  .cat-group{padding:48px 0;border-top:1px solid var(--line)}
+  .cat-group:first-child{border-top:none;padding-top:8px}
+  .cat-head{margin-bottom:26px}
+  .cat-head h2{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:0 0 6px}
+  .cat-head p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:66ch}
+
+  .report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .report-card{
+    background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;
+    cursor:zoom-in;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    opacity:0;transform:translateY(14px);
+  }
+  .report-card.in{opacity:1;transform:none}
+  .report-card:hover{transform:translateY(-4px);box-shadow:0 22px 38px -28px rgba(16,16,16,.32);border-color:var(--line)}
+  .report-thumb{aspect-ratio:4/3;background:var(--paper-2);position:relative;overflow:hidden}
+  .report-thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .report-thumb::after{
+    content:"View full size";
+    position:absolute;inset:auto 0 0 0;background:rgba(16,16,16,.82);color:#fff;
+    font-size:.68rem;font-weight:600;text-align:center;padding:7px 0;
+    transform:translateY(100%);transition:transform .25s ease;
+  }
+  .report-card:hover .report-thumb::after{transform:translateY(0)}
+  .report-info{padding:14px 16px 16px}
+  .report-title{font-weight:600;font-size:.92rem;margin:0 0 4px}
+  .report-meta{font-size:.76rem;color:var(--ink-soft);margin:0}
+
+  @media(max-width:480px){
+    .report-grid{grid-template-columns:repeat(2,1fr)}
+  }
+
+  .lightbox{position:fixed;inset:0;background:rgba(16,16,16,.92);display:none;align-items:center;justify-content:center;padding:30px 16px;z-index:200}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(900px,100%);max-height:90vh;border-radius:8px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .lightbox-close{position:absolute;top:20px;right:24px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:1.2rem;cursor:pointer;z-index:2}
+  .lightbox-close:hover{background:rgba(255,255,255,.1)}
+  .lightbox-cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#d8d8d2;font-size:.85rem}
+
+  footer{background:var(--ink);color:#a9a9a3;text-align:center;padding:34px 0;font-size:.85rem}
+  footer .brand{color:#fff;font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
+
+  @media(max-width:680px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.report-card{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="avail"><span class="dot"></span>Available for New Clients</span>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#service">Service</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="pill" href="index.html#contact">Let's Talk <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <a class="breadcrumb" href="index.html">&larr; Back to portfolio</a>
+    <h1>SEO Work Samples</h1>
+    <p>A working look at the SEO tasks behind the results: checking indexing status, researching keywords, auditing technical health, tracking rankings, and writing and optimizing on-page content — across several client sites.</p>
+    <div class="head-tags">
+      <span class="head-tag">Google Search Console</span>
+      <span class="head-tag">Semrush</span>
+      <span class="head-tag">Google Business Profile</span>
+      <span class="head-tag">Elementor + Rank Math</span>
+    </div>
+    <div class="context-box">
+      <p><strong>Note:</strong> this is a partial set — more samples will be added over time. Screenshots span multiple client sites and niches, including AutoLead Pro, Holistic Dental Hygiene Clinic, New York Motor Car, A&amp;J Windowhaus, Scrambler Therapy, and a roofing client.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Indexing &amp; Crawlability</h2>
+        <p>Diagnosing why a page isn't indexed, requesting indexing through Google Search Console, and confirming sitemap submissions are read successfully.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="indexing_1.png" data-cap="Google Search Console — URL is not on Google, page indexing details">
+          <div class="report-thumb"><img src="indexing_1.png" alt="Google Search Console showing a URL not indexed on Google"></div>
+          <div class="report-info"><p class="report-title">URL Inspection — Before</p><p class="report-meta">Page discovered, not yet indexed</p></div>
+        </button>
+
+        <button class="report-card" data-full="indexing_2.png" data-cap="Google Search Console — requesting indexing, live URL test in progress">
+          <div class="report-thumb"><img src="indexing_2.png" alt="Google Search Console testing live URL after requesting indexing"></div>
+          <div class="report-info"><p class="report-title">Requesting Indexing</p><p class="report-meta">Live URL test in progress</p></div>
+        </button>
+
+        <button class="report-card" data-full="indexing_3.png" data-cap="Google Search Console — URL is available to Google, live test passed">
+          <div class="report-thumb"><img src="indexing_3.png" alt="Google Search Console confirming a URL is available to Google"></div>
+          <div class="report-info"><p class="report-title">URL Inspection — After</p><p class="report-meta">Confirmed available to Google</p></div>
+        </button>
+
+        <button class="report-card" data-full="sitemaps_indexed.png" data-cap="Google Search Console — submitted sitemaps, all showing Success status">
+          <div class="report-thumb"><img src="sitemaps_indexed.png" alt="Google Search Console sitemaps list, all showing success status"></div>
+          <div class="report-info"><p class="report-title">Sitemap Submissions</p><p class="report-meta">AutoLead Pro — 5 sitemaps, all successful</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Google Business Profile</h2>
+        <p>Managing a client's live Google Business Profile listing — reviews, photos, hours, and profile completeness.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="GBP.png" data-cap="Holistic Dental Hygiene Clinic Google Business Profile, managed listing with 4.9 stars and 76 reviews">
+          <div class="report-thumb"><img src="GBP.png" alt="Holistic Dental Hygiene Clinic Google Business Profile listing"></div>
+          <div class="report-info"><p class="report-title">Managed GBP Listing</p><p class="report-meta">Holistic Dental Hygiene Clinic — 4.9★, 76 reviews</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Keyword Research</h2>
+        <p>Volume, difficulty, intent, and CPC analysis in Semrush to shape content and targeting decisions across different client niches.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="keyword_research_1.png" data-cap="Semrush Keyword Overview — 'automotive lead providers'">
+          <div class="report-thumb"><img src="keyword_research_1.png" alt="Semrush keyword overview for automotive lead providers"></div>
+          <div class="report-info"><p class="report-title">"automotive lead providers"</p><p class="report-meta">140 vol · 11% difficulty · Commercial intent</p></div>
+        </button>
+
+        <button class="report-card" data-full="keyword_research_2.png" data-cap="Semrush Keyword Overview — 'holistic dental hygiene'">
+          <div class="report-thumb"><img src="keyword_research_2.png" alt="Semrush keyword overview for holistic dental hygiene"></div>
+          <div class="report-info"><p class="report-title">"holistic dental hygiene"</p><p class="report-meta">50 vol · 16% difficulty · Informational</p></div>
+        </button>
+
+        <button class="report-card" data-full="keyword_research_3.png" data-cap="Semrush Keyword Overview — 'dental hygiene'">
+          <div class="report-thumb"><img src="keyword_research_3.png" alt="Semrush keyword overview for dental hygiene"></div>
+          <div class="report-info"><p class="report-title">"dental hygiene"</p><p class="report-meta">8.1K vol · 42% difficulty · Informational</p></div>
+        </button>
+
+        <button class="report-card" data-full="keyword_research_4.png" data-cap="Semrush Keyword Overview — 'scrambler therapy'">
+          <div class="report-thumb"><img src="keyword_research_4.png" alt="Semrush keyword overview for scrambler therapy"></div>
+          <div class="report-info"><p class="report-title">"scrambler therapy"</p><p class="report-meta">2.9K vol · 22% difficulty · Informational/Commercial</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Local SEO Configuration &amp; Map Rankings</h2>
+        <p>Setting up local/organization schema in Rank Math for each client site, plus tracking live map pack performance for a different niche client.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="local_seo_1.png" data-cap="Rank Math Local SEO settings — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="local_seo_1.png" alt="Rank Math Local SEO settings for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Local SEO Setup</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="local_seo_2.png" data-cap="Rank Math Local SEO settings — New York Motor Car">
+          <div class="report-thumb"><img src="local_seo_2.png" alt="Rank Math Local SEO settings for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Local SEO Setup</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="local_seo_3.png" data-cap="Rank Math Local SEO settings — Auto Lead Pro">
+          <div class="report-thumb"><img src="local_seo_3.png" alt="Rank Math Local SEO settings for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Local SEO Setup</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="local_SEO_map_rank.jpg" data-cap="Semrush Map Rank Tracker — A&amp;J Windowhaus, Tampa FL">
+          <div class="report-thumb"><img src="local_SEO_map_rank.jpg" alt="Semrush Map Rank Tracker heatmap for A&J Windowhaus in Tampa, Florida"></div>
+          <div class="report-info"><p class="report-title">Map Rank Tracker</p><p class="report-meta">A&amp;J Windowhaus — Avg. Rank 3.56, Tampa FL</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Schema Markup</h2>
+        <p>Building structured data with the Schema Builder so search engines can display rich results for each client's services.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="schema_1.png" data-cap="Elementor Schema Builder — New York Motor Car Service schema">
+          <div class="report-thumb"><img src="schema_1.png" alt="Elementor Schema Builder configuring a Service schema for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Service Schema</p><p class="report-meta">New York Motor Car — Nationwide Car Delivery</p></div>
+        </button>
+
+        <button class="report-card" data-full="schema_2.png" data-cap="Elementor Schema Builder — Auto Lead Pro Service schema">
+          <div class="report-thumb"><img src="schema_2.png" alt="Elementor Schema Builder configuring a Service schema for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Service Schema</p><p class="report-meta">Auto Lead Pro — Predictive Car Buying Leads</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Site Performance &amp; Technical SEO</h2>
+        <p>Ongoing technical monitoring in Semrush: which pages drive traffic, what errors need fixing, and how rankings move over time.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="top_pages.png" data-cap="Semrush Top Pages report for AutoLead Pro">
+          <div class="report-thumb"><img src="top_pages.png" alt="Semrush Top Pages report showing traffic and keywords per page"></div>
+          <div class="report-info"><p class="report-title">Top Pages Report</p><p class="report-meta">AutoLead Pro — traffic, keywords, ref. domains</p></div>
+        </button>
+
+        <button class="report-card" data-full="site_audit.png" data-cap="Semrush Site Audit — errors, warnings, and notices">
+          <div class="report-thumb"><img src="site_audit.png" alt="Semrush Site Audit showing errors, warnings, and notices"></div>
+          <div class="report-info"><p class="report-title">Site Audit</p><p class="report-meta">AutoLead Pro — 3 errors flagged and tracked</p></div>
+        </button>
+
+        <button class="report-card" data-full="position_tracking.png" data-cap="Semrush Position Tracking landscape overview">
+          <div class="report-thumb"><img src="position_tracking.png" alt="Semrush Position Tracking landscape showing visibility and traffic trends"></div>
+          <div class="report-info"><p class="report-title">Position Tracking</p><p class="report-meta">AutoLead Pro — Visibility 26.42%, +5.10%</p></div>
+        </button>
+
+        <button class="report-card" data-full="competitor_s_analysis.png" data-cap="Semrush competitor visibility trends vs. AutoLead Pro">
+          <div class="report-thumb"><img src="competitor_s_analysis.png" alt="Semrush market traffic vs selected domains trends comparing AutoLead Pro to competitors"></div>
+          <div class="report-info"><p class="report-title">Competitor Analysis</p><p class="report-meta">AutoLead Pro vs. 4 tracked competitors</p></div>
+        </button>
+
+        <button class="report-card" data-full="technical_errors.jpg" data-cap="Semrush Site Audit warnings for a roofing client">
+          <div class="report-thumb"><img src="technical_errors.jpg" alt="Semrush Site Audit warnings list including unminified JS/CSS and low text-HTML ratio"></div>
+          <div class="report-info"><p class="report-title">Site Audit Warnings</p><p class="report-meta">gandvroofing.net — 6 warnings identified</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>On-Page Content Writing &amp; Editing</h2>
+        <p>Writing and revising blog posts and landing page copy directly inside the site builder — Elementor and the native WordPress block editor.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="blog_post_1.png" data-cap="Elementor + Rank Math — Buying a Used Car in Suffolk County blog post">
+          <div class="report-thumb"><img src="blog_post_1.png" alt="Elementor editor with Rank Math SEO panel for a used car buying guide blog post"></div>
+          <div class="report-info"><p class="report-title">Blog Draft in Elementor</p><p class="report-meta">New York Motor Car — Suffolk County buying guide</p></div>
+        </button>
+
+        <button class="report-card" data-full="blog_post.png" data-cap="Elementor + Rank Math — Michigan Dealership Lead Generation blog post, published">
+          <div class="report-thumb"><img src="blog_post.png" alt="Published blog post on Michigan dealership lead generation strategies"></div>
+          <div class="report-info"><p class="report-title">Published Blog Post</p><p class="report-meta">AutoLead Pro — Michigan lead gen strategies</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_5.png" data-cap="Elementor — editing homepage H1 heading for target keyword focus">
+          <div class="report-thumb"><img src="cotent_optimization_5.png" alt="Elementor editor showing homepage heading being edited for SEO"></div>
+          <div class="report-info"><p class="report-title">Homepage Heading Edit</p><p class="report-meta">AutoLead Pro — special finance &amp; subprime leads</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_6.png" data-cap="Elementor — editing icon box copy on the homepage">
+          <div class="report-thumb"><img src="cotent_optimization_6.png" alt="Elementor editor showing icon box content being edited on the homepage"></div>
+          <div class="report-info"><p class="report-title">Homepage Copy Edit</p><p class="report-meta">AutoLead Pro — exclusive leads feature block</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_4.png" data-cap="Elementor — editing 'How It Works' step copy for a car lease broker">
+          <div class="report-thumb"><img src="cotent_optimization_4.png" alt="Elementor editor showing How It Works section copy being edited for a car lease broker site"></div>
+          <div class="report-info"><p class="report-title">"How It Works" Copy Edit</p><p class="report-meta">Car Lease Broker — 3-step process section</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_3.png" data-cap="Elementor — editing homepage H1 for a car lease broker">
+          <div class="report-thumb"><img src="cotent_optimization_3.png" alt="Elementor editor showing homepage H1 heading being edited for a car lease broker site"></div>
+          <div class="report-info"><p class="report-title">Homepage H1 Edit</p><p class="report-meta">New York Motor Car — Car Lease Broker page</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_2.png" data-cap="WordPress editor — 'Owner-Operated and Direct Hygiene Care' section">
+          <div class="report-thumb"><img src="cotent_optimization_2.png" alt="WordPress block editor showing a content section about owner-operated dental hygiene care"></div>
+          <div class="report-info"><p class="report-title">Homepage Content Section</p><p class="report-meta">Holistic Dental Hygiene Clinic — About section</p></div>
+        </button>
+
+        <button class="report-card" data-full="cotent_optimization_1.png" data-cap="WordPress editor — homepage hero H1, 'Holistic Dental Hygienist In Calgary'">
+          <div class="report-thumb"><img src="cotent_optimization_1.png" alt="WordPress block editor showing the homepage hero heading for a holistic dental hygiene clinic"></div>
+          <div class="report-info"><p class="report-title">Homepage Hero Edit</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Meta Titles &amp; Descriptions (Rank Math)</h2>
+        <p>Writing and scoring SEO titles, meta descriptions, and focus keywords for each page using Rank Math's snippet editor.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="on_page_optimization_1.png" data-cap="Rank Math Snippet Editor — Auto Lead Pro homepage, 81/100 SEO score">
+          <div class="report-thumb"><img src="on_page_optimization_1.png" alt="Rank Math snippet editor showing an 81 out of 100 SEO score for the Auto Lead Pro homepage"></div>
+          <div class="report-info"><p class="report-title">Homepage Meta — 81/100</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="on_page_optimization_2.png" data-cap="Rank Math Snippet Editor — New York Motor Car, Nationwide Car Delivery page">
+          <div class="report-thumb"><img src="on_page_optimization_2.png" alt="Rank Math snippet editor for the Nationwide Car Delivery page on New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Page Meta — 67/100</p><p class="report-meta">New York Motor Car — Nationwide Car Delivery</p></div>
+        </button>
+
+        <button class="report-card" data-full="on_page_optimization_3.png" data-cap="Rank Math Snippet Editor — Holistic Dental Hygiene Clinic homepage">
+          <div class="report-thumb"><img src="on_page_optimization_3.png" alt="Rank Math snippet editor and focus keyword checklist for the Holistic Dental Hygiene Clinic homepage"></div>
+          <div class="report-info"><p class="report-title">Homepage Meta &amp; Focus Keyword</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Content Distribution &amp; Link Building</h2>
+        <p>Producing platform-specific off-page content and tracking published blog volume to support link building and brand mentions.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="link_building.png" data-cap="Off-page SEO content kit — platform-specific pieces for Medium, Blogger, Tumblr, Google Sites, and Flipboard">
+          <div class="report-thumb"><img src="link_building.png" alt="Google Doc containing an off-page SEO content kit with platform-specific articles"></div>
+          <div class="report-info"><p class="report-title">Off-Page Content Kit</p><p class="report-meta">Auto Lead Pro — Medium, Blogger, Tumblr, Google Sites, Flipboard</p></div>
+        </button>
+
+        <button class="report-card" data-full="blog_post_2.jpg" data-cap="Webflow CMS — 23 published blog posts for Scrambler Therapy">
+          <div class="report-thumb"><img src="blog_post_2.jpg" alt="Webflow CMS collection showing 23 published blog posts for Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Blog Content Library</p><p class="report-meta">Scrambler Therapy — 23 published posts</p></div>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Enlarged screenshot">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Raquel S. Raytos</div>
+    <div>Digital Marketing &amp; Web Specialist · Working with clients worldwide</div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  btn&&btn.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.report-card').forEach(function(el){io.observe(el)});
+
+  var lightbox=document.getElementById('lightbox');
+  var lightboxImg=document.getElementById('lightboxImg');
+  var lightboxCap=document.getElementById('lightboxCap');
+  document.querySelectorAll('.report-card').forEach(function(t){
+    t.addEventListener('click',function(){
+      lightboxImg.src=t.getAttribute('data-full');
+      lightboxCap.textContent=t.getAttribute('data-cap')||'';
+      lightbox.classList.add('open');
+    });
+  });
+  function closeLightbox(){lightbox.classList.remove('open');lightboxImg.src='';lightboxCap.textContent='';}
+  document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+
+</body>
+</html>
