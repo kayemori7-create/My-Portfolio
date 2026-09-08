@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Social Media Graphics Work Samples | Raquel S. Raytos</title>
+<meta name="description" content="Social media graphic design samples for recruitment, healthcare, and automotive clients." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101010;
+    --ink-soft:#4a4a4a;
+    --paper:#ffffff;
+    --paper-2:#f4f4f2;
+    --line:rgba(16,16,16,.14);
+    --line-soft:rgba(16,16,16,.08);
+    --accent:#2ea44a;
+    --display:Arial,Helvetica,sans-serif;
+    --body:"Inter",system-ui,-apple-system,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  ul{margin:0;padding:0;list-style:none}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:8px 14px 8px 12px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(46,164,74,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,164,74,.55)}70%{box-shadow:0 0 0 7px rgba(46,164,74,0)}100%{box-shadow:0 0 0 0 rgba(46,164,74,0)}}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a:not(.pill){font-size:.92rem;font-weight:500;color:var(--ink);position:relative;padding-bottom:2px}
+  .nav-links a:not(.pill)::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--ink);transition:right .25s ease}
+  .nav-links a:not(.pill):hover::after{right:0}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:11px 20px;border-radius:100px;font-weight:600;font-size:.88rem;transition:transform .2s,background .2s}
+  .pill:hover{background:#2a2a2a;transform:translateY(-1px)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+  .page-head{padding:64px 0 30px}
+  .breadcrumb{display:inline-block;font-size:.86rem;font-weight:600;color:var(--ink-soft);margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .breadcrumb:hover{color:var(--ink)}
+  .page-head h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.01em;margin:0 0 16px}
+  .page-head p{color:var(--ink-soft);max-width:62ch;font-size:1.02rem;margin:0 0 22px}
+  .head-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .head-tag{font-size:.78rem;font-weight:600;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
+
+  .context-box{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:16px;padding:22px 26px;margin-top:24px}
+  .context-box p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:74ch}
+  .context-box strong{color:var(--ink)}
+
+  main{padding:20px 0 100px}
+
+  .cat-group{padding:48px 0;border-top:1px solid var(--line)}
+  .cat-group:first-child{border-top:none;padding-top:8px}
+  .cat-head{margin-bottom:26px}
+  .cat-head h2{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:0 0 6px}
+  .cat-head p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:66ch}
+
+  .report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+  .report-card{
+    background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;
+    cursor:zoom-in;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    opacity:0;transform:translateY(14px);
+  }
+  .report-card.in{opacity:1;transform:none}
+  .report-card:hover{transform:translateY(-4px);box-shadow:0 22px 38px -28px rgba(16,16,16,.32);border-color:var(--line)}
+  .report-thumb{aspect-ratio:1/1;background:var(--paper-2);position:relative;overflow:hidden}
+  .report-thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .report-thumb::after{
+    content:"View full size";
+    position:absolute;inset:auto 0 0 0;background:rgba(16,16,16,.82);color:#fff;
+    font-size:.68rem;font-weight:600;text-align:center;padding:7px 0;
+    transform:translateY(100%);transition:transform .25s ease;
+  }
+  .report-card:hover .report-thumb::after{transform:translateY(0)}
+  .ai-badge{position:absolute;top:8px;left:8px;z-index:2;background:rgba(16,16,16,.82);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.02em;padding:4px 9px;border-radius:100px}
+  .report-info{padding:12px 14px 14px}
+  .report-title{font-weight:600;font-size:.88rem;margin:0 0 4px}
+  .report-meta{font-size:.74rem;color:var(--ink-soft);margin:0}
+
+  @media(max-width:480px){.report-grid{grid-template-columns:repeat(2,1fr)}}
+
+  .lightbox{position:fixed;inset:0;background:rgba(16,16,16,.92);display:none;align-items:center;justify-content:center;padding:30px 16px;z-index:200}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(600px,100%);max-height:90vh;border-radius:8px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .lightbox-close{position:absolute;top:20px;right:24px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:1.2rem;cursor:pointer;z-index:2}
+  .lightbox-close:hover{background:rgba(255,255,255,.1)}
+  .lightbox-cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#d8d8d2;font-size:.85rem}
+
+  footer{background:var(--ink);color:#a9a9a3;text-align:center;padding:34px 0;font-size:.85rem}
+  footer .brand{color:#fff;font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
+
+  @media(max-width:680px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.report-card{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="avail"><span class="dot"></span>Available for New Clients</span>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#service">Service</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="pill" href="index.html#contact">Let's Talk <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <a class="breadcrumb" href="index.html">&larr; Back to portfolio</a>
+    <h1>Social Media Graphics</h1>
+    <p>Graphic design samples created for social media posting — recruitment ads, healthcare awareness content, and automotive lead-gen creatives — across several clients.</p>
+    <div class="head-tags">
+      <span class="head-tag">Canva</span>
+      <span class="head-tag">Recruitment</span>
+      <span class="head-tag">Healthcare</span>
+      <span class="head-tag">Automotive</span>
+      <span class="head-tag">AI-Generated</span>
+    </div>
+    <div class="context-box">
+      <p><strong>Note:</strong> this is a partial set — more samples will be added over time. Graphics span multiple clients: Sustainable Talent, South Florida Scrambler Therapy, Auto Lead Pro, Apple Auto Loans, New York Motor Car, Holistic Dental Hygiene Clinic, and Scamper &amp; Co. Cards marked <strong>AI-Generated</strong> were created without any source assets provided by the client.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Sustainable Talent</h2>
+        <p>Recruitment and hiring graphics, plus seasonal/holiday posts for a staffing agency client.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="1757613529480.jpg" data-cap="9/11 Never Forget — Sustainable Talent">
+          <div class="report-thumb"><img src="1757613529480.jpg" alt="9/11 We Will Never Forget graphic for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">9/11 Tribute Post</p><p class="report-meta">Sustainable Talent</p></div>
+        </button>
+
+        <button class="report-card" data-full="1760545293036.jpg" data-cap="Now Hiring: GTM Recruiter — Sustainable Talent x Postman">
+          <div class="report-thumb"><img src="1760545293036.jpg" alt="Now Hiring GTM Recruiter graphic for Sustainable Talent and Postman"></div>
+          <div class="report-info"><p class="report-title">GTM Recruiter Hiring</p><p class="report-meta">Sustainable Talent x Postman</p></div>
+        </button>
+
+        <button class="report-card" data-full="1760551118663.jpg" data-cap="Now Hiring: Sr. HR Recruiter — Sustainable Talent">
+          <div class="report-thumb"><img src="1760551118663.jpg" alt="Now Hiring Senior HR Recruiter graphic for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Sr. HR Recruiter Hiring</p><p class="report-meta">Sustainable Talent</p></div>
+        </button>
+
+        <button class="report-card" data-full="1760627033080.jpg" data-cap="Now Hiring: Recruiter (Skills Trades/Manufacturing) — Sustainable Talent">
+          <div class="report-thumb"><img src="1760627033080.jpg" alt="Now Hiring Recruiter for Skills Trades and Manufacturing graphic"></div>
+          <div class="report-info"><p class="report-title">Trades Recruiter Hiring</p><p class="report-meta">Sustainable Talent — Marshall, MI</p></div>
+        </button>
+
+        <button class="report-card" data-full="1764255096482.jpg" data-cap="Happy Thanksgiving — Sustainable Talent">
+          <div class="report-thumb"><img src="1764255096482.jpg" alt="Happy Thanksgiving graphic for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Thanksgiving Post</p><p class="report-meta">Sustainable Talent</p></div>
+        </button>
+
+        <button class="report-card" data-full="1765390836331.jpg" data-cap="Now Hiring: Senior DBA Engineer — Sustainable Talent x NVIDIA">
+          <div class="report-thumb"><img src="1765390836331.jpg" alt="Now Hiring Senior DBA Engineer graphic for Sustainable Talent and NVIDIA"></div>
+          <div class="report-info"><p class="report-title">Senior DBA Engineer Hiring</p><p class="report-meta">Sustainable Talent x NVIDIA</p></div>
+        </button>
+
+        <button class="report-card" data-full="1765565603250.jpg" data-cap="Now Hiring: Senior Datacenter Systems Architect — Sustainable Talent x NVIDIA">
+          <div class="report-thumb"><img src="1765565603250.jpg" alt="Now Hiring Senior Datacenter Systems Architect graphic for Sustainable Talent and NVIDIA"></div>
+          <div class="report-info"><p class="report-title">Datacenter Architect Hiring</p><p class="report-meta">Sustainable Talent x NVIDIA</p></div>
+        </button>
+
+        <button class="report-card" data-full="1766584826333.jpg" data-cap="Happy Holidays — Sustainable Talent">
+          <div class="report-thumb"><img src="1766584826333.jpg" alt="Happy Holidays graphic for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Holiday Post</p><p class="report-meta">Sustainable Talent</p></div>
+        </button>
+
+        <button class="report-card" data-full="1781119869315.jpg" data-cap="Now Hiring: QA Engineer — PC & Cloud Gaming — Sustainable Talent x NVIDIA">
+          <div class="report-thumb"><img src="1781119869315.jpg" alt="Now Hiring QA Engineer PC and Cloud Gaming graphic for Sustainable Talent and NVIDIA"></div>
+          <div class="report-info"><p class="report-title">QA Engineer Hiring</p><p class="report-meta">Sustainable Talent x NVIDIA</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>South Florida Scrambler Therapy</h2>
+        <p>Healthcare awareness and educational content — condition lists, FAQs, treatment info, and full promotional flyers for a pain management clinic.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="484803480_122158166312336419_3691282973164000796_n.jpg" data-cap="Meet Our Pain Management Doctors — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="484803480_122158166312336419_3691282973164000796_n.jpg" alt="Meet Our Pain Management Doctors graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Meet the Doctors</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="584566738_122187521546336419_2579146832898095623_n.jpg" data-cap="FAQ: How Soon Can I Feel Relief? — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="584566738_122187521546336419_2579146832898095623_n.jpg" alt="FAQ How Soon Can I Feel Relief graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">FAQ Post</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="615404173_122193217196336419_2023527225092962732_n.jpg" data-cap="Why Electrode Placement Is Critical to Scrambler Therapy Success">
+          <div class="report-thumb"><img src="615404173_122193217196336419_2023527225092962732_n.jpg" alt="Why Electrode Placement Is Critical graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Educational Post</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="644250406_122197677152336419_1452554103702784199_n.jpg" data-cap="Free Pain Evaluation Session — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="644250406_122197677152336419_1452554103702784199_n.jpg" alt="Free Pain Evaluation Session graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Free Evaluation CTA</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="644904150_122197677164336419_8053467164428596403_n.jpg" data-cap="Conditions We Treat list — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="644904150_122197677164336419_8053467164428596403_n.jpg" alt="Conditions treated list graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Conditions Treated List</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="644556107_122197677134336419_7465869228230431129_n.jpg" data-cap="Are You Suffering From Chronic Pain? — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="644556107_122197677134336419_7465869228230431129_n.jpg" alt="Are You Suffering From Chronic Pain graphic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Awareness Post</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="648936461_122198033666336419_2020001541927603409_n.jpg" data-cap="Nerve Pain vs Muscle Pain infographic — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="648936461_122198033666336419_2020001541927603409_n.jpg" alt="Nerve Pain vs Muscle Pain infographic for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Nerve vs. Muscle Pain Infographic</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+        <button class="report-card" data-full="652385776_122198952308336419_7791724553502399291_n.jpg" data-cap="Full promotional flyer — South Florida Scrambler Therapy">
+          <div class="report-thumb"><img src="652385776_122198952308336419_7791724553502399291_n.jpg" alt="Full promotional flyer for South Florida Scrambler Therapy"></div>
+          <div class="report-info"><p class="report-title">Clinic Promo Flyer</p><p class="report-meta">South Florida Scrambler Therapy</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Auto Lead Pro</h2>
+        <p>Comparison and value-proposition graphics for an automotive lead generation brand.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="ChatGPT_Image_Aug_1__2026__04_16_11_AM.png" data-cap="Not All Leads Are Exclusive — Auto Lead Pro">
+          <div class="report-thumb"><img src="ChatGPT_Image_Aug_1__2026__04_16_11_AM.png" alt="Not All Leads Are Exclusive comparison graphic for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Shared vs. Exclusive Leads</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="ChatGPT_Image_Aug_1__2026__05_13_16_AM.png" data-cap="One Exclusive Partner. Your Own Campaigns. Better Results. — Auto Lead Pro">
+          <div class="report-thumb"><img src="ChatGPT_Image_Aug_1__2026__05_13_16_AM.png" alt="One Exclusive Partner value proposition graphic for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Value Proposition Post</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_1.png" data-cap="5 Things Every Good Car Lead Provider Should Have. Does Yours? — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_1.png" alt="5 Things Every Good Car Lead Provider Should Have carousel intro for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Lead Provider Checklist — Intro</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_2.png" data-cap="01 Exclusive Leads: Not shared with 5 other stores in your ZIP — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_2.png" alt="Exclusive Leads carousel slide for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Checklist: Exclusive Leads</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_3.png" data-cap="02 Territory + Credit-Type Targeting — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_3.png" alt="Territory and Credit-Type Targeting carousel slide for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Checklist: Territory + Credit Targeting</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_4.png" data-cap="03 Instant Delivery — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_4.png" alt="Instant Delivery carousel slide for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Checklist: Instant Delivery</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_5.png" data-cap="04 Verified Contact Info and Real Buyer Intent — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_5.png" alt="Verified Contact Info and Real Buyer Intent carousel slide for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Checklist: Verified Contact Info</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+        <button class="report-card" data-full="AutoLeadPro_Carousel_Slide_6.png" data-cap="05 TCPA-Compliant Data Collection — Auto Lead Pro">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AutoLeadPro_Carousel_Slide_6.png" alt="TCPA-Compliant Data Collection carousel slide for Auto Lead Pro"></div>
+          <div class="report-info"><p class="report-title">Checklist: TCPA-Compliant Data</p><p class="report-meta">Auto Lead Pro</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Apple Auto Loans</h2>
+        <p>Educational finance content for an auto loan partner brand.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="Week_2.png" data-cap="Beyond the Credit Score: What Partners Review — Apple Auto Loans">
+          <div class="report-thumb"><img src="Week_2.png" alt="Beyond the Credit Score educational graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Credit Score Education Post</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="Week_3.png" data-cap="What Credit Score Do You Actually Need for a Car Loan in NY? (580-660) — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Week_3.png" alt="What Credit Score Do You Actually Need graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Credit Score Range Post</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="AppleAutoLoans_Step1.png" data-cap="What Happens When You Apply — Step 1: Submit One Secure Request — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AppleAutoLoans_Step1.png" alt="Submit One Secure Request step graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Step 1: Submit One Secure Request</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="AppleAutoLoans_Step2.png" data-cap="What Happens When You Apply — Step 2: We Route Your Request — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AppleAutoLoans_Step2.png" alt="We Route Your Request step graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Step 2: We Route Your Request</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="AppleAutoLoans_Step3.png" data-cap="What Happens When You Apply — Step 3: A Partner Reviews It — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AppleAutoLoans_Step3.png" alt="A Partner Reviews It step graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Step 3: A Partner Reviews It</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="AppleAutoLoans_Step4.png" data-cap="What Happens When You Apply — Step 4: If There Is a Fit — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AppleAutoLoans_Step4.png" alt="If There Is a Fit step graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Step 4: If There Is a Fit</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+        <button class="report-card" data-full="AppleAutoLoans_Step5.png" data-cap="What Happens When You Apply — Step 5: You Decide What Is Next — Apple Auto Loans">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="AppleAutoLoans_Step5.png" alt="You Decide What Is Next step graphic for Apple Auto Loans"></div>
+          <div class="report-info"><p class="report-title">Step 5: You Decide What Is Next</p><p class="report-meta">Apple Auto Loans</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>New York Motor Car</h2>
+        <p>AI-generated used car spotlights, lease broker education, and customer testimonial graphics for a Long Island dealership — created with no source assets provided by the client.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="2014__BMW_7_Series.png" data-cap="Used Car Spotlight: 2014 BMW 7 Series 750Li xDrive — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="2014__BMW_7_Series.png" alt="Used Car Spotlight graphic for a 2014 BMW 7 Series at New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Spotlight: 2014 BMW 7 Series</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="2016_Acura_ILX.png" data-cap="Used Car Spotlight: 2016 Acura ILX Sedan — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="2016_Acura_ILX.png" alt="Used Car Spotlight graphic for a 2016 Acura ILX at New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Spotlight: 2016 Acura ILX</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="2016_Ford_Explorer.png" data-cap="Used Car Spotlight: 2016 Ford Explorer XLT — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="2016_Ford_Explorer.png" alt="Used Car Spotlight graphic for a 2016 Ford Explorer at New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Spotlight: 2016 Ford Explorer</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="NYMotorCar_Broker_Slide1.png" data-cap="What Is a Car Lease Broker, Actually? (Slide 1 of 3) — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="NYMotorCar_Broker_Slide1.png" alt="What Is a Car Lease Broker Actually carousel slide for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Lease Broker Series: What Is a Broker?</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="NYMotorCar_Broker_Slide2.png" data-cap="Broker vs. Dealership (Slide 2 of 3) — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="NYMotorCar_Broker_Slide2.png" alt="Broker vs Dealership comparison carousel slide for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Lease Broker Series: Broker vs. Dealership</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="NYMotorCar_Broker_Slide3.png" data-cap="Why Use a Lease Broker? (Slide 3 of 3) — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="NYMotorCar_Broker_Slide3.png" alt="Why Use a Lease Broker carousel slide for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Lease Broker Series: Why Use a Broker?</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="August_14.png" data-cap="Another Long Island Driver, Zero Stress Buying Experience — testimonial from Janice D. — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="August_14.png" alt="Zero Stress Buying Experience testimonial graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Testimonial: Zero Stress Buying Experience</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="August_19.png" data-cap="Approved From the Couch, Delivered to the Driveway — testimonial from Girly Prudenciado — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="August_19.png" alt="Approved From the Couch Delivered to the Driveway testimonial graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Testimonial: Approved From the Couch</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="Aug_31.png" data-cap="100+ Vehicles. New Arrivals Weekly. All Credit Types. — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Aug_31.png" alt="100+ Vehicles New Arrivals Weekly All Credit Types graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">100+ Vehicles / All Credit Types</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="Sept__4.png" data-cap="Delivered to Your Driveway. Anywhere in the US. — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Sept__4.png" alt="Delivered to Your Driveway Anywhere in the US graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Nationwide Delivery Post</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="Sept__7.png" data-cap="Serving Every Corner of Long Island — From Patchogue to Port Jefferson — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Sept__7.png" alt="Serving Every Corner of Long Island service area map graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Service Area Map Post</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="Sept__21.png" data-cap="Inventory Spotlight: 2019 Ford Ranger SuperCab — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Sept__21.png" alt="2019 Ford Ranger SuperCab inventory spotlight graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Spotlight: 2019 Ford Ranger SuperCab</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+        <button class="report-card" data-full="Sept__23.png" data-cap="Inventory Spotlight: 2016 Ford Explorer Sport — Nationwide Delivery Available — New York Motor Car">
+          <div class="report-thumb"><span class="ai-badge">AI-Generated</span><img src="Sept__23.png" alt="2016 Ford Explorer Sport inventory spotlight graphic for New York Motor Car"></div>
+          <div class="report-info"><p class="report-title">Spotlight: 2016 Ford Explorer Sport</p><p class="report-meta">New York Motor Car</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Holistic Dental Hygiene Clinic</h2>
+        <p>Clinic-branded educational and promotional graphics — services, hours, oral-systemic health education, and product features — designed for Holistic Dental Hygiene Clinic's own social media.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="HDHC_AboutUs.jpg" data-cap="About Us — Exams &amp; Testing, Dental Cleanings, Teeth Whitening — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_AboutUs.jpg" alt="About Us services graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">About Us / Services We Offer</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_NewOpeningHours.jpg" data-cap="New Opening Hours — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_NewOpeningHours.jpg" alt="New Opening Hours graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">New Opening Hours</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SocialMediaLinks.jpg" data-cap="Where to Find Us on Social Media — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SocialMediaLinks.jpg" alt="Where to Find Us on Social Media graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Where to Find Us on Social Media</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_Welcome.jpg" data-cap="Welcome to Holistic Dental Hygiene Clinic — Location &amp; Facility Highlights">
+          <div class="report-thumb"><img src="HDHC_Welcome.jpg" alt="Welcome to Holistic Dental Hygiene Clinic location graphic"></div>
+          <div class="report-info"><p class="report-title">Welcome / Location Highlights</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_BlisK12.jpg" data-cap="What Is Blis K12? — Oral Probiotic Education — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_BlisK12.jpg" alt="What Is Blis K12 educational graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">What Is Blis K12?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_FiberGuide.jpg" data-cap="Fiber Guide — Carbs, Fruits, Vegetables, Seeds &amp; Nuts — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_FiberGuide.jpg" alt="Fiber Guide educational graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Fiber Guide</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OralSystemicHealth.jpg" data-cap="Oral Health's Connection to Alzheimer's, Heart Disease, Diabetes &amp; More — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OralSystemicHealth.jpg" alt="Oral-Systemic Health Connections infographic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Oral-Systemic Health Connections</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Intro.jpg" data-cap="5 Essential Minerals to Decrease Stress &amp; Regulate Cortisol Levels — Intro — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Intro.jpg" alt="5 Essential Minerals to Decrease Stress carousel intro for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Intro</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Magnesium.jpg" data-cap="Magnesium — the Relaxation Mineral — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Magnesium.jpg" alt="Magnesium stress mineral carousel slide for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Magnesium</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Zinc.jpg" data-cap="Zinc — Regulating the Body's Stress Response — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Zinc.jpg" alt="Zinc stress mineral carousel slide for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Zinc</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Calcium.jpg" data-cap="Calcium — Calming the Nervous System — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Calcium.jpg" alt="Calcium stress mineral carousel slide for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Calcium</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Potassium.jpg" data-cap="Potassium — Balancing Electrolytes — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Potassium.jpg" alt="Potassium stress mineral carousel slide for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Potassium</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_StressMinerals_Iron.jpg" data-cap="Iron — Supporting Oxygen Transport — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_StressMinerals_Iron.jpg" alt="Iron stress mineral carousel slide for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Stress Minerals Series: Iron</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_RisewellFloss_Intro.jpg" data-cap="Risewell Hydroxyapatite Floss — Product Intro — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_RisewellFloss_Intro.jpg" alt="Risewell Hydroxyapatite Floss intro graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Risewell Floss Series: Intro</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_RisewellFloss_WhatMakesItSpecial.jpg" data-cap="Risewell Hydroxyapatite Floss — What Makes It Special — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_RisewellFloss_WhatMakesItSpecial.jpg" alt="Risewell Floss What Makes It Special graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Risewell Floss Series: What Makes It Special</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_RisewellFloss_WhyYoullLoveIt.jpg" data-cap="Risewell Hydroxyapatite Floss — Why You'll Love It — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_RisewellFloss_WhyYoullLoveIt.jpg" alt="Risewell Floss Why You'll Love It graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Risewell Floss Series: Why You'll Love It</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_RisewellFloss_FollowUs.jpg" data-cap="Risewell Hydroxyapatite Floss — Follow Us for More — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_RisewellFloss_FollowUs.jpg" alt="Risewell Floss Follow Us for More graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Risewell Floss Series: Follow Us for More</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_WeledaToothpaste_Intro.jpg" data-cap="Weleda Calendula and Weleda Plant Gel Toothpaste — Product Intro — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_WeledaToothpaste_Intro.jpg" alt="Weleda Calendula and Plant Gel Toothpaste intro graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Weleda Toothpaste Series: Intro</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_WeledaCalendula_Ingredients.jpg" data-cap="Weleda Calendula Toothpaste — Calendula Extract &amp; Myrrh Benefits — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_WeledaCalendula_Ingredients.jpg" alt="Weleda Calendula Toothpaste ingredients graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Weleda Toothpaste Series: Calendula Ingredients</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_WeledaPlantGel_Ingredients.jpg" data-cap="Weleda Plant Gel Toothpaste — Ratanhia Root, Mint Oils &amp; Silica Benefits — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_WeledaPlantGel_Ingredients.jpg" alt="Weleda Plant Gel Toothpaste ingredients graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Weleda Toothpaste Series: Plant Gel Ingredients</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_WeledaToothpaste_DurationOfUse.jpg" data-cap="Weleda Toothpaste — Duration of Use — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_WeledaToothpaste_DurationOfUse.jpg" alt="Weleda Toothpaste Duration of Use graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Weleda Toothpaste Series: Duration of Use</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_Intro.jpg" data-cap="Dry Mouth with SMART Mouth Lozenges — Product Intro — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_Intro.jpg" alt="SMART Mouth Dry Mouth Lozenges intro graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: Intro</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_WhoIsItFor.jpg" data-cap="SMART Mouth Lozenges — Who Is the Product For? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_WhoIsItFor.jpg" alt="SMART Mouth Lozenges Who Is the Product For graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: Who Is It For?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_HowItHelps.jpg" data-cap="SMART Mouth Lozenges — How It Helps? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_HowItHelps.jpg" alt="SMART Mouth Lozenges How It Helps graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: How It Helps?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_ActiveIngredients1.jpg" data-cap="SMART Mouth Lozenges — Active Ingredients: Xylitol, Aloe Vera, Mint Extract — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_ActiveIngredients1.jpg" alt="SMART Mouth Lozenges active ingredients graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: Active Ingredients</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_ActiveIngredients2.jpg" data-cap="SMART Mouth Lozenges — Active Ingredients: Xylitol, Aloe Vera, Mint Extract (repost) — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_ActiveIngredients2.jpg" alt="SMART Mouth Lozenges active ingredients repost graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: Active Ingredients (Repost)</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_SmartMouth_HowToUse.jpg" data-cap="SMART Mouth Lozenges — How to Use? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_SmartMouth_HowToUse.jpg" alt="SMART Mouth Lozenges How to Use graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">SMART Mouth Lozenges Series: How to Use?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OsteoGen_Intro.jpg" data-cap="Osteo-Gen Homeopathic — Your Natural Solution for Bone Health — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OsteoGen_Intro.jpg" alt="Osteo-Gen Homeopathic intro graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Osteo-Gen Series: Intro</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OsteoGen_WhatIsItUsedFor.jpg" data-cap="Osteo-Gen Homeopathic — What Is It Used For? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OsteoGen_WhatIsItUsedFor.jpg" alt="Osteo-Gen Homeopathic What Is It Used For graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Osteo-Gen Series: What Is It Used For?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OsteoGen_WhoCanBenefit.jpg" data-cap="Osteo-Gen Homeopathic — Who Can Benefit From This Product? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OsteoGen_WhoCanBenefit.jpg" alt="Osteo-Gen Homeopathic Who Can Benefit graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Osteo-Gen Series: Who Can Benefit?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OsteoGen_ActiveIngredients.jpg" data-cap="Osteo-Gen Homeopathic — Active Ingredients &amp; How to Use It — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OsteoGen_ActiveIngredients.jpg" alt="Osteo-Gen Homeopathic active ingredients graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Osteo-Gen Series: Active Ingredients</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+        <button class="report-card" data-full="HDHC_OsteoGen_HowToUse.jpg" data-cap="Osteo-Gen Homeopathic — How to Use? — Holistic Dental Hygiene Clinic">
+          <div class="report-thumb"><img src="HDHC_OsteoGen_HowToUse.jpg" alt="Osteo-Gen Homeopathic How to Use graphic for Holistic Dental Hygiene Clinic"></div>
+          <div class="report-info"><p class="report-title">Osteo-Gen Series: How to Use?</p><p class="report-meta">Holistic Dental Hygiene Clinic</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Scamper & Co</h2>
+        <p>Homepage layouts, seasonal sale promos, and Instagram Story graphics for a dog-lover jewelry brand.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="ScamperCo_NewCollection_Homepage.png" data-cap="Shop Now: New Collection — Homepage Layout — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_NewCollection_Homepage.png" alt="New Collection homepage layout graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">New Collection Homepage</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_July4thSale.jpg" data-cap="July 4th Sale — 20% Off Pendant &amp; Earring Favorites — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_July4thSale.jpg" alt="July 4th Sale Instagram Story graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">July 4th Sale (20% Off)</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_PrimeDayPicks.png" data-cap="Prime Day Picks — 15% Off Sitewide — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_PrimeDayPicks.png" alt="Prime Day Picks 15% Off Sitewide graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">Prime Day Picks (15% Off Sitewide)</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_MadeForMemorableMoments.png" data-cap="Made For Memorable Moments — Birthday, Mother's Day, Diamond Accent Lifestyle Grid — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_MadeForMemorableMoments.png" alt="Made For Memorable Moments lifestyle grid graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">Made For Memorable Moments</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_NewArrivals_Homepage.png" data-cap="New Arrivals + Exclusive Discounts — Homepage Layout — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_NewArrivals_Homepage.png" alt="New Arrivals and Exclusive Discounts homepage layout graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">New Arrivals Homepage</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_NewArrivals_ProductGrid.png" data-cap="15% Off New Arrivals — Product Grid with Nav Bar — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_NewArrivals_ProductGrid.png" alt="New Arrivals product grid graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">New Arrivals Product Grid</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+        <button class="report-card" data-full="ScamperCo_NewArrivals_15OffPawsome.png" data-cap="15% Off New Arrivals + Paw-some Deals 25% Off — Scamper &amp; Co">
+          <div class="report-thumb"><img src="ScamperCo_NewArrivals_15OffPawsome.png" alt="New Arrivals 15% off and Pawsome Deals 25% off graphic for Scamper and Co"></div>
+          <div class="report-info"><p class="report-title">New Arrivals + Pawsome Deals</p><p class="report-meta">Scamper &amp; Co</p></div>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Enlarged graphic">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Raquel S. Raytos</div>
+    <div>Digital Marketing &amp; Web Specialist · Working with clients worldwide</div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  btn&&btn.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.report-card').forEach(function(el){io.observe(el)});
+
+  var lightbox=document.getElementById('lightbox');
+  var lightboxImg=document.getElementById('lightboxImg');
+  var lightboxCap=document.getElementById('lightboxCap');
+  document.querySelectorAll('.report-card').forEach(function(t){
+    t.addEventListener('click',function(){
+      lightboxImg.src=t.getAttribute('data-full');
+      lightboxCap.textContent=t.getAttribute('data-cap')||'';
+      lightbox.classList.add('open');
+    });
+  });
+  function closeLightbox(){lightbox.classList.remove('open');lightboxImg.src='';lightboxCap.textContent='';}
+  document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+
+</body>
+</html>
