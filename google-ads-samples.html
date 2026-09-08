@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Google Ads &amp; Analytics Work Samples | Raquel S. Raytos</title>
+<meta name="description" content="Google Ads campaign management, conversion tracking, and Google Tag Manager work samples across several client accounts." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101010;
+    --ink-soft:#4a4a4a;
+    --paper:#ffffff;
+    --paper-2:#f4f4f2;
+    --line:rgba(16,16,16,.14);
+    --line-soft:rgba(16,16,16,.08);
+    --accent:#2ea44a;
+    --display:Arial,Helvetica,sans-serif;
+    --body:"Inter",system-ui,-apple-system,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  ul{margin:0;padding:0;list-style:none}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:8px 14px 8px 12px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(46,164,74,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,164,74,.55)}70%{box-shadow:0 0 0 7px rgba(46,164,74,0)}100%{box-shadow:0 0 0 0 rgba(46,164,74,0)}}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a:not(.pill){font-size:.92rem;font-weight:500;color:var(--ink);position:relative;padding-bottom:2px}
+  .nav-links a:not(.pill)::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:var(--ink);transition:right .25s ease}
+  .nav-links a:not(.pill):hover::after{right:0}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:11px 20px;border-radius:100px;font-weight:600;font-size:.88rem;transition:transform .2s,background .2s}
+  .pill:hover{background:#2a2a2a;transform:translateY(-1px)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+  .page-head{padding:64px 0 30px}
+  .breadcrumb{display:inline-block;font-size:.86rem;font-weight:600;color:var(--ink-soft);margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .breadcrumb:hover{color:var(--ink)}
+  .page-head h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.01em;margin:0 0 16px}
+  .page-head p{color:var(--ink-soft);max-width:62ch;font-size:1.02rem;margin:0 0 22px}
+  .head-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .head-tag{font-size:.78rem;font-weight:600;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
+
+  .context-box{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:16px;padding:22px 26px;margin-top:24px}
+  .context-box p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:74ch}
+  .context-box strong{color:var(--ink)}
+
+  main{padding:20px 0 100px}
+
+  .cat-group{padding:48px 0;border-top:1px solid var(--line)}
+  .cat-group:first-child{border-top:none;padding-top:8px}
+  .cat-head{margin-bottom:26px}
+  .cat-head h2{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:0 0 6px}
+  .cat-head p{color:var(--ink-soft);font-size:.92rem;margin:0;max-width:66ch}
+
+  .report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+  .report-card{
+    background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;cursor:zoom-in;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    text-align:left;padding:0;font:inherit;color:inherit;
+    opacity:0;transform:translateY(14px);
+  }
+  .report-card.in{opacity:1;transform:none}
+  .report-card:hover{transform:translateY(-4px);box-shadow:0 22px 38px -28px rgba(16,16,16,.32);border-color:var(--line)}
+  .report-thumb{aspect-ratio:16/10;background:#f2f2f0;overflow:hidden;position:relative}
+  .report-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .report-info{padding:12px 14px 14px}
+  .report-title{font-weight:600;font-size:.88rem;margin:0 0 4px}
+  .report-meta{font-size:.74rem;color:var(--ink-soft);margin:0}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(10,10,10,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:40px 20px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:100%;max-height:82vh;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .lightbox-cap{color:#eee;font-size:.9rem;margin-top:16px;text-align:center;max-width:80ch}
+  .lightbox-close{position:absolute;top:24px;right:28px;color:#fff;font-size:2rem;background:none;border:0;cursor:pointer;line-height:1}
+
+  @media(max-width:480px){.report-grid{grid-template-columns:1fr}}
+
+  footer{background:var(--ink);color:#a9a9a3;text-align:center;padding:34px 0;font-size:.85rem}
+  footer .brand{color:#fff;font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
+
+  @media(max-width:680px){
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.report-card{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="avail"><span class="dot"></span>Available for New Clients</span>
+    <nav class="nav-links" id="menu">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#service">Service</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="pill" href="index.html#contact">Let's Talk <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <a class="breadcrumb" href="index.html">&larr; Back to portfolio</a>
+    <h1>Google Ads &amp; Analytics Samples</h1>
+    <p>Campaign performance, conversion tracking setup, and Google Tag Manager configuration across several client accounts, plus social post scheduling in HubSpot.</p>
+    <div class="head-tags">
+      <span class="head-tag">Google Ads</span>
+      <span class="head-tag">Google Tag Manager</span>
+      <span class="head-tag">HubSpot</span>
+      <span class="head-tag">Conversion Tracking</span>
+    </div>
+    <div class="context-box">
+      <p><strong>Note:</strong> this is a partial set, more samples will be added over time. Screenshots span three client accounts: Sustainable Talent, G&amp;V Roofing, and South Florida Scrambler. Figures shown are from the accounts' own dashboards over the date ranges visible in each screenshot.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>Sustainable Talent</h2>
+        <p>Google Ads campaign management and social post scheduling for a Florida healthcare client.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="SustainableTalent_HubSpotSocialPosts.png" data-cap="HubSpot social post scheduling and performance for Sustainable Talent's Instagram and Facebook accounts, including published dates and interaction counts.">
+          <div class="report-thumb"><img src="SustainableTalent_HubSpotSocialPosts.png" alt="HubSpot social post performance dashboard for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Social Post Scheduling &amp; Performance</p><p class="report-meta">Sustainable Talent · HubSpot</p></div>
+        </button>
+
+        <button class="report-card" data-full="SustainableTalent_GoogleAdsOverview.png" data-cap="Google Ads campaign overview for Sustainable Talent, Dec 1–8: 89 clicks, 2.59K impressions, 9 conversions, $375 spend, with demographic and device breakdowns.">
+          <div class="report-thumb"><img src="SustainableTalent_GoogleAdsOverview.png" alt="Google Ads campaign overview dashboard for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Campaign Overview: 89 Clicks, 9 Conversions</p><p class="report-meta">Sustainable Talent · Google Ads</p></div>
+        </button>
+
+        <button class="report-card" data-full="SustainableTalent_GoogleAdsConversions.png" data-cap="Google Ads conversion goals summary for Sustainable Talent: 58 total results including 50 phone call leads and 8 booked appointments.">
+          <div class="report-thumb"><img src="SustainableTalent_GoogleAdsConversions.png" alt="Google Ads conversion goals summary for Sustainable Talent"></div>
+          <div class="report-info"><p class="report-title">Conversion Goals: 58 Results (50 Phone Leads)</p><p class="report-meta">Sustainable Talent · Google Ads</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>G&amp;V Roofing</h2>
+        <p>Google Ads keyword-level conversion tracking and Tag Manager setup for a roofing contractor.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="GVRoofing_GoogleAdsOverview.png" data-cap="Google Ads campaign overview for G&amp;V Roofing's Search-2 campaign, Dec 1–8: 4 clicks, 134 impressions, 6 conversions, $10.06 spend, 97.3% optimization score.">
+          <div class="report-thumb"><img src="GVRoofing_GoogleAdsOverview.png" alt="Google Ads campaign overview dashboard for G&amp;V Roofing"></div>
+          <div class="report-info"><p class="report-title">Campaign Overview: 97.3% Optimization Score</p><p class="report-meta">G&amp;V Roofing · Google Ads</p></div>
+        </button>
+
+        <button class="report-card" data-full="GVRoofing_GoogleAdsKeywords.png" data-cap="Keyword-level conversion tracking for G&amp;V Roofing's Search-2 campaign, including branded and service keywords such as roofing contractors, commercial roofing, and siding services.">
+          <div class="report-thumb"><img src="GVRoofing_GoogleAdsKeywords.png" alt="Google Ads keyword-level tracking table for G&amp;V Roofing"></div>
+          <div class="report-info"><p class="report-title">Keyword-Level Conversion Tracking</p><p class="report-meta">G&amp;V Roofing · Google Ads</p></div>
+        </button>
+
+        <button class="report-card" data-full="GVRoofing_TagManager.png" data-cap="Google Tag Manager setup for G&amp;V Roofing, including Call Leads and G-Ads Conversion Tracker tags for phone and thank-you-page conversion tracking, plus GA4 and Conversion Linker tags.">
+          <div class="report-thumb"><img src="GVRoofing_TagManager.png" alt="Google Tag Manager tags configuration for G&amp;V Roofing"></div>
+          <div class="report-info"><p class="report-title">Conversion Tracking Tag Setup</p><p class="report-meta">G&amp;V Roofing · Google Tag Manager</p></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-head">
+        <h2>South Florida Scrambler Therapy</h2>
+        <p>Google Tag Manager container health and version management for a healthcare clinic.</p>
+      </div>
+      <div class="report-grid">
+
+        <button class="report-card" data-full="SFST_TagManager.png" data-cap="Google Tag Manager workspace overview for South Florida Scrambler, showing an Excellent container quality score and a live published version with no issues detected.">
+          <div class="report-thumb"><img src="SFST_TagManager.png" alt="Google Tag Manager workspace overview for South Florida Scrambler"></div>
+          <div class="report-info"><p class="report-title">Container Overview: Excellent Quality Score</p><p class="report-meta">South Florida Scrambler Therapy · Google Tag Manager</p></div>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <div>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-cap" id="lightboxCap"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Raquel S. Raytos</div>
+    <div>Digital Marketing &amp; Web Specialist · Working with clients worldwide</div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  btn&&btn.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.report-card').forEach(function(el){io.observe(el)});
+
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightboxImg'), lbCap=document.getElementById('lightboxCap'), lbClose=document.getElementById('lightboxClose');
+  document.querySelectorAll('.report-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      lbImg.src = card.getAttribute('data-full');
+      lbCap.textContent = card.getAttribute('data-cap') || '';
+      lb.classList.add('open');
+    });
+  });
+  lbClose.addEventListener('click', function(){ lb.classList.remove('open'); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+</script>
+
+</body>
+</html>
